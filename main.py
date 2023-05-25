@@ -1,10 +1,10 @@
+# 5994663798:AAG71TpWfx-jM4aFTJG1U97rURALLNOrnDA
+
+from constants import API_KEY
 from telegram.ext import Updater, CommandHandler
-import constants as keys
 
 
-print("Loading The Lost City...")
-
-TOKEN = '5994663798:AAG71TpWfx-jM4aFTJG1U97rURALLNOrnDA'
+print("Loading The Lost City...");
 
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text = """
@@ -12,7 +12,7 @@ def start(update, context):
     Type /help to see the available commands. 
     """)
 
-updater = Updater(token=API_KEY_TOKEN, use_context=True)
+updater = Updater(API_KEY, use_context=True)
 dispatcher = updater.dispatcher
 
 start_handler = CommandHandler('start', start)
