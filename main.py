@@ -1,5 +1,7 @@
 from telegram.ext import *
-from constants import *
+
+
+TOKEN = '5994663798:AAG71TpWfx-jM4aFTJG1U97rURALLNOrnDA'
 
 def start_command(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text = """
