@@ -22,9 +22,9 @@ def cmd_help(message):
     /use - Usar articulos del inventario    
     """)
 
-@bot.message_handler(commands=['look', '.look', 'LOOK'])
-def cmd_look(message)
-    bot.reply_to(message, f"Estas en {area.locations_area_1['name']}.\n\n {area.locations_area_1['descripcion']}")
+@bot.message_handler(commands=['look'])
+def cmd_look(message):
+    bot.reply_to(message, f"Estas en {area.locations_area_1[0]}.\n\n {area.locations_area_1[1]}")
 
 
 if __name__ == '__main__':
