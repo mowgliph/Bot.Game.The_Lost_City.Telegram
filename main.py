@@ -1,25 +1,18 @@
-# API Telegram Bot 5994663798:AAG71TpWfx-jM4aFTJG1U97rURALLNOrnDA
-# Api OPEN AI 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
-
-import os
-import openai
-import aiogram
 import keep_alive as alive
+import constants as key
+from telebot import *
+
 
 alive.keep_alive()
 
-print("Loading The Lost City")
+bot = telebot.TeleBot(key.API_KEY)
 
-openai.api_key = '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'
+@bot.message_handler(commands=['start'])
+def cmd_start(message):
+    bot.reply_to(message, "Welcome to the Lost City adventure game! \n Type /help to see the available commands.")
 
-response = openai.Completion.create(
-    model="text-davinci-003",
-    prompt="Escribe el codigo en python de una calculadora",
-    temperature=0.5,
-    max_tokens=1024,
-    top_p=1,
-    frequency_penalty=0.0,
-    presense_penalty=0.0
-)
+if __name__ == __main__:
+    print("Loading The Lost City")
+    bot.infinity_polling()
+    print('fin')
 
-print(response.choise[0].text)
