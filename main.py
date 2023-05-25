@@ -1,5 +1,8 @@
-from telegram.ext import *
+from telegram.ext import Updater, CommandHandler
+import constants as keys
 
+
+print("Loading The Lost City...")
 
 TOKEN = '5994663798:AAG71TpWfx-jM4aFTJG1U97rURALLNOrnDA'
 
@@ -9,10 +12,11 @@ def start(update, context):
     Type /help to see the available commands. 
     """)
 
-updater = Updater(token=TOKEN, use_context=True)
+updater = Updater(token=API_KEY_TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
 
 updater.start_polling()
+updater.idle()
