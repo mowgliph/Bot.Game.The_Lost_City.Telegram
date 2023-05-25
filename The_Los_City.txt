@@ -1,0 +1,10 @@
+The Lost City
+
+# Storyline
+In This Game, the player is an adventurer who must search for a lost city in the Jungle.
+Along the way, they encounter dangerous creatures, ancient ruins, and other obstacles.
+The Goal of the game is to find yhe lost city and uncover its secrets.
+
+# Description
+A fun and inmersive text-based adventure game. Explore a world full of mystery and adventure by 
+entering text commands.
