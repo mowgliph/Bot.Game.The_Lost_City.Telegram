@@ -1,25 +1,15 @@
 # 5994663798:AAG71TpWfx-jM4aFTJG1U97rURALLNOrnDA
 
-from constants import API_KEY
-from telegram.ext import Updater, CommandHandler
+import telebot
+import constants as keys
 
+bot = telebot.TeleBot(keys.API_KEY)
 
 print("Loading The Lost City...");
 
-def start(update, context):
-    update.message.reply_tex("""
-    Welcome to the Lost City adventure game! \n
-    Type /help to see the available commands. 
-    """)
+@bot.message_handler(commands=['start','START'])
 
-def main():
-    updater = Updater(API_KEY, use_context=True)
-    dp = updater.dispatcher
+def send_welcome(message):
+    bot.reply_to(message, "Welcome to the Lost City adventure game! \n Type /help to see the available commands")
 
-    #commands area
-    dp.add_handler(CommandHandler("start", start))
-
-    updater.start_polling()
-    updater.idle()
-
-main()
+bot.polling()
