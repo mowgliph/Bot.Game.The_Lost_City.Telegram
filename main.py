@@ -24,7 +24,7 @@ def cmd_help(message):
 
 @bot.message_handler(commands=['look'])
 def cmd_look(message):
-    bot.reply_to(message, f"Estas en {area.locations_area_1[0]}.\n\n {area.locations_area_1[1]}")
+    bot.reply_to(message, f"Estas en {area.locations_area_1[0][0}.\n\n {area.locations_area_1[0][1]}")
 
 
 if __name__ == '__main__':
